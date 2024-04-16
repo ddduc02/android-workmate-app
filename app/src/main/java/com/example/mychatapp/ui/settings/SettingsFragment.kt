@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -63,6 +64,8 @@ class SettingsFragment : Fragment() {
                     viewModel.changeUserImage(it)
                 }
             }
+        } else {
+            Toast.makeText(context, "Lỗi", Toast.LENGTH_SHORT).show()
         }
     }
 

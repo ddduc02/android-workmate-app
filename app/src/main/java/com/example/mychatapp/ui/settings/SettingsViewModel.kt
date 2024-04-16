@@ -1,6 +1,7 @@
 package com.example.mychatapp.ui.settings
 
 import android.net.Uri
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -16,6 +17,7 @@ import com.example.mychatapp.data.Result
 
 class SettingsViewModelFactory(private val userID: String) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        Log.d("Check", "UserID on SettingsViewModelFactory " + userID)
         return SettingsViewModel(userID) as T
     }
 }

@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
 
             when (destination.id) {
+                R.id.calendarsFragment -> navView.visibility = View.GONE
                 R.id.profileFragment -> navView.visibility = View.GONE
                 R.id.chatFragment -> navView.visibility = View.GONE
                 R.id.startFragment -> navView.visibility = View.GONE
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
+                R.id.navigation_calendars,
                 R.id.navigation_chats,
                 R.id.navigation_notifications,
                 R.id.navigation_users,

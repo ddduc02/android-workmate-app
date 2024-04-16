@@ -30,7 +30,7 @@ class ChatViewModel(private val myUserID: String, private val otherUserID: Strin
     private val fbRefUserInfoObserver = FirebaseReferenceValueObserver()
 
     val messagesList = MediatorLiveData<MutableList<Message>>()
-    val newMessageText = MutableLiveData<String>()
+    val newMessageText = MutableLiveData<String?>()
     val otherUser: LiveData<UserInfo> = _otherUser
 
     init {

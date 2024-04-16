@@ -5,6 +5,15 @@
     app:startDestination="@+id/startFragment">
 
     <fragment
+        android:id="@+id/navigation_calendars"
+        android:name="com.example.mychatapp.ui.calendars.CalendarsFragment"
+        android:label="@string/title_calendars"
+        tools:layout="@layout/fragment_calendars">
+        <action
+            android:id="@+id/action_navigation_calendars_to_calendarsFragment"
+            app:destination="@id/calendarsFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/navigation_chats"
         android:name="com.example.mychatapp.ui.chats.ChatsFragment"
         android:label="@string/title_chats"
@@ -44,6 +53,11 @@
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
+        android:id="@+id/calendarsFragment"
+        android:name="com.example.mychatapp.ui.calendars.CalendarsFragment"
+        android:label="@string/title_calendars"
+        tools:layout="@layout/fragment_calendars" />
+    <fragment
         android:id="@+id/chatFragment"
         android:name="com.example.mychatapp.ui.chat.ChatFragment"
         android:label="@string/title_chat" />
@@ -58,8 +72,8 @@
             android:id="@+id/action_startFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_startFragment_to_navigation_chats"
-            app:destination="@id/navigation_chats"
+            android:id="@+id/action_startFragment_to_navigation_calendars"
+            app:destination="@id/navigation_calendars"
             app:launchSingleTop="true"
             app:popUpTo="@id/startFragment" />
     </fragment>
@@ -69,8 +83,8 @@
         android:label="Login"
         tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_loginFragment_to_navigation_chats"
-            app:destination="@id/navigation_chats"
+            android:id="@+id/action_loginFragment_to_navigation_calendars"
+            app:destination="@id/navigation_calendars"
             app:launchSingleTop="true"
             app:popUpTo="@id/startFragment" />
     </fragment>
@@ -80,8 +94,8 @@
         android:label="Create Account"
         tools:layout="@layout/fragment_create_account">
         <action
-            android:id="@+id/action_createAccountFragment_to_navigation_chats"
-            app:destination="@id/navigation_chats"
+            android:id="@+id/action_createAccountFragment_to_navigation_calendars"
+            app:destination="@id/navigation_calendars"
             app:launchSingleTop="true"
             app:popUpTo="@id/startFragment" />
     </fragment>

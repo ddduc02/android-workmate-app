@@ -1,5 +1,6 @@
 package com.example.mychatapp.ui.users
 
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.mychatapp.data.db.entity.User
 import com.example.mychatapp.data.db.repository.DatabaseRepository
@@ -26,6 +27,7 @@ class UsersViewModel(private val myUserID: String) : DefaultViewModel() {
     init {
         usersList.addSource(updatedUsersList) { mutableList ->
             usersList.value = updatedUsersList.value?.filter { it.info.id != myUserID }
+            Log.d("Check", "userList " + usersList.toString())
         }
         loadUsers()
     }

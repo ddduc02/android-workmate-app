@@ -19,7 +19,7 @@ class StartFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         viewDataBinding =
             FragmentStartBinding.inflate(inflater, container, false).apply { viewmodel = viewModel }
         viewDataBinding.lifecycleOwner = this.viewLifecycleOwner
@@ -32,7 +32,7 @@ class StartFragment : Fragment() {
         setupObservers()
 
         if (userIsAlreadyLoggedIn()) {
-            navigateDirectlyToChats()
+            navigateDirectlyToCalendars()
         }
     }
 
@@ -46,8 +46,8 @@ class StartFragment : Fragment() {
             viewLifecycleOwner, EventObserver { navigateToCreateAccount() })
     }
 
-    private fun navigateDirectlyToChats() {
-        findNavController().navigate(R.id.action_startFragment_to_navigation_chats)
+    private fun navigateDirectlyToCalendars() {
+        findNavController().navigate(R.id.action_startFragment_to_navigation_calendars)
     }
 
     private fun navigateToLogin() {

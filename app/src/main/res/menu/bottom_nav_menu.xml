@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/navigation_calendars"
+        android:icon="@drawable/baseline_assignment_24"
+        android:title="@string/title_calendars" />
+    <item
         android:id="@+id/navigation_chats"
         android:icon="@drawable/ic_baseline_chat_bubble_24"
         android:title="@string/title_chats" />

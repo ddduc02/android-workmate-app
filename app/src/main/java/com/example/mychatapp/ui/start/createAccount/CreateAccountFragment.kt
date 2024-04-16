@@ -58,11 +58,11 @@ class CreateAccountFragment : Fragment() {
 
         viewModel.isCreatedEvent.observe(viewLifecycleOwner, EventObserver {
             SharedPreferencesUtil.saveUserID(requireContext(), it.uid)
-            navigateToChats()
+            navigateToCalendars()
         })
     }
 
-    private fun navigateToChats() {
-        findNavController().navigate(R.id.action_createAccountFragment_to_navigation_chats)
+    private fun navigateToCalendars() {
+        findNavController().navigate(R.id.action_createAccountFragment_to_navigation_calendars)
     }
 }

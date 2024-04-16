@@ -63,6 +63,6 @@ class LoginFragment : Fragment() {
     }
 
     private fun navigateToChats() {
-        findNavController().navigate(R.id.action_loginFragment_to_navigation_chats)
+        findNavController().navigate(R.id.action_loginFragment_to_navigation_calendars)
     }
 }

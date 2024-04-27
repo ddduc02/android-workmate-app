@@ -16,7 +16,6 @@ class ChatsListAdapter internal constructor(private val viewModel: ChatsViewMode
         fun bind(viewModel: ChatsViewModel, item: ChatWithUserInfo) {
             binding.viewmodel = viewModel
             binding.chatwithuserinfo = item
-            binding.chatwithuserinfo = item
             binding.executePendingBindings()
         }
     }

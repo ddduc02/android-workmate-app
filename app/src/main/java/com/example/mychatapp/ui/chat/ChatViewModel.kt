@@ -1,5 +1,6 @@
 package com.example.mychatapp.ui.chat
 
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.mychatapp.data.Result
 import com.example.mychatapp.data.db.entity.Chat
@@ -34,6 +35,7 @@ class ChatViewModel(private val myUserID: String, private val otherUserID: Strin
     val otherUser: LiveData<UserInfo> = _otherUser
 
     init {
+        Log.d("Check", myUserID)
         setupChat()
         checkAndUpdateLastMessageSeen()
     }

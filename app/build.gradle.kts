@@ -40,7 +40,6 @@ dependencies {
 
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
     val lifecycle_version = "2.5.1"
-    val arch_version = "2.1.0"
 
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")

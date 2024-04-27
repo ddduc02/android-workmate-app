@@ -92,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:padding="0dp"
+                app:passwordToggleEnabled="true"
                 app:boxBackgroundColor="@android:color/transparent">
 
                 <EditText
@@ -111,16 +112,18 @@
 
         </LinearLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/loginButton"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginTop="98dp"
-            android:backgroundTint="@color/colorAccent"
+            android:background="@drawable/gradient_background"
             android:enabled="@{!viewmodel.isCreatingAccount()}"
             android:onClick="@{() -> viewmodel.createAccountPressed()}"
             android:text="@string/create"
             android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

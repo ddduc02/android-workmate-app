@@ -41,6 +41,12 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         navController.addOnDestinationChangedListener { _, destination, _ ->
 
+            if (destination.id == R.id.startFragment) {
+                supportActionBar?.hide()
+            } else {
+                supportActionBar?.show()
+            }
+
             when (destination.id) {
                 R.id.calendarsFragment -> navView.visibility = View.GONE
                 R.id.profileFragment -> navView.visibility = View.GONE

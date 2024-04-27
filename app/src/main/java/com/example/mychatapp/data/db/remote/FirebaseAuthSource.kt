@@ -34,7 +34,9 @@ class FirebaseAuthSource {
         return FirebaseAuth.AuthStateListener {
             if (it.currentUser == null) {
                 b.invoke(Result.Error("No user"))
-            } else { b.invoke(Result.Success(it.currentUser)) }
+            } else {
+                b.invoke(Result.Success(it.currentUser))
+            }
         }
     }
 
@@ -50,7 +52,10 @@ class FirebaseAuthSource {
         authInstance.signOut()
     }
 
-    fun attachAuthStateObserver(firebaseAuthStateObserver: FirebaseAuthStateObserver, b: ((Result<FirebaseUser>) -> Unit)) {
+    fun attachAuthStateObserver(
+        firebaseAuthStateObserver: FirebaseAuthStateObserver,
+        b: ((Result<FirebaseUser>) -> Unit)
+    ) {
         val listener = attachAuthObserver(b)
         firebaseAuthStateObserver.start(listener, authInstance)
     }
